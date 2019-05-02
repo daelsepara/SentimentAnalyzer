@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+  </configuration>
+  <import>
+    <widget-library name="../bin/Debug/SentimentAnalyzer.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="640 480">
+    <property name="MemberName" />
+    <property name="WidthRequest">640</property>
+    <property name="HeightRequest">480</property>
+    <property name="Title" translatable="yes">MainWindow</property>
+    <property name="WindowPosition">CenterAlways</property>
+    <property name="Resizable">False</property>
+    <property name="AllowGrow">False</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.Fixed" id="LayoutMain">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.Label" id="LabelMain">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">&lt;b&gt;Sentiment Analyzer&lt;/b&gt;</property>
+            <property name="UseMarkup">True</property>
+          </widget>
+          <packing>
+            <property name="X">30</property>
+            <property name="Y">30</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="AnalyzeButton">
+            <property name="MemberName" />
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">analyze text</property>
+            <property name="UseUnderline">True</property>
+            <property name="FocusOnClick">False</property>
+            <signal name="Clicked" handler="OnAnalyzeButtonClicked" />
+          </widget>
+          <packing>
+            <property name="X">30</property>
+            <property name="Y">420</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="LoadButton">
+            <property name="MemberName" />
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">load text from file</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnLoadButtonClicked" />
+          </widget>
+          <packing>
+            <property name="X">130</property>
+            <property name="Y">420</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="LabelScores">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">&lt;b&gt;Scores&lt;/b&gt;</property>
+            <property name="UseMarkup">True</property>
+          </widget>
+          <packing>
+            <property name="X">450</property>
+            <property name="Y">60</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="LabelPositive">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Positive</property>
+          </widget>
+          <packing>
+            <property name="X">450</property>
+            <property name="Y">90</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="Positive">
+            <property name="MemberName" />
+            <property name="WidthRequest">130</property>
+            <property name="IsEditable">False</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">450</property>
+            <property name="Y">110</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="LabelNegative">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Negative</property>
+          </widget>
+          <packing>
+            <property name="X">450</property>
+            <property name="Y">150</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="Negative">
+            <property name="MemberName" />
+            <property name="WidthRequest">130</property>
+            <property name="IsEditable">False</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">450</property>
+            <property name="Y">170</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="LabelNeutral">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Neutral</property>
+          </widget>
+          <packing>
+            <property name="X">450</property>
+            <property name="Y">210</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="Neutral">
+            <property name="MemberName" />
+            <property name="WidthRequest">130</property>
+            <property name="IsEditable">False</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">450</property>
+            <property name="Y">230</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="LabelCompound">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Compound</property>
+          </widget>
+          <packing>
+            <property name="X">450</property>
+            <property name="Y">270</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="Compound">
+            <property name="MemberName" />
+            <property name="WidthRequest">130</property>
+            <property name="IsEditable">False</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">450</property>
+            <property name="Y">290</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
+            <property name="MemberName" />
+            <property name="WidthRequest">400</property>
+            <property name="HeightRequest">350</property>
+            <property name="ShadowType">In</property>
+            <child>
+              <widget class="Gtk.TextView" id="SentimentView">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="ShowScrollbars">True</property>
+                <property name="Text" translatable="yes" />
+                <property name="WrapMode">Word</property>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="X">30</property>
+            <property name="Y">60</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="SentimentImageHappy">
+            <property name="MemberName" />
+            <property name="WidthRequest">64</property>
+            <property name="HeightRequest">64</property>
+            <property name="Visible">False</property>
+            <property name="Pixbuf">resource:SentimentAnalyzer.happy.png</property>
+          </widget>
+          <packing>
+            <property name="X">480</property>
+            <property name="Y">340</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="SentimentImageNeutral">
+            <property name="MemberName" />
+            <property name="WidthRequest">64</property>
+            <property name="HeightRequest">64</property>
+            <property name="Visible">False</property>
+            <property name="Pixbuf">resource:SentimentAnalyzer.neutral.png</property>
+          </widget>
+          <packing>
+            <property name="X">480</property>
+            <property name="Y">340</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="SentimentImageMad">
+            <property name="MemberName" />
+            <property name="WidthRequest">64</property>
+            <property name="HeightRequest">64</property>
+            <property name="Visible">False</property>
+            <property name="Pixbuf">resource:SentimentAnalyzer.mad.png</property>
+          </widget>
+          <packing>
+            <property name="X">480</property>
+            <property name="Y">340</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>
