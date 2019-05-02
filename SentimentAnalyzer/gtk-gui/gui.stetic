@@ -4,7 +4,7 @@
     <images-root-path>..</images-root-path>
   </configuration>
   <import>
-    <widget-library name="../bin/Debug/SentimentAnalyzer.exe" internal="true" />
+    <widget-library name="../bin/Release/SentimentAnalyzer.exe" internal="true" />
   </import>
   <widget class="Gtk.Window" id="MainWindow" design-size="640 480">
     <property name="MemberName" />
