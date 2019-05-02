@@ -52,11 +52,11 @@ public partial class MainWindow : Gtk.Window
     {
         HideImages();
 
-        if (compound > 0.0)
+        if (compound > 0.05)
         {
             SentimentImageHappy.Show();
         }
-        else if (compound < 0.0)
+        else if (compound < 0.05)
         {
             SentimentImageMad.Show();
         }
