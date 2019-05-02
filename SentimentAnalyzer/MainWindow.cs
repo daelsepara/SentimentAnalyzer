@@ -56,7 +56,7 @@ public partial class MainWindow : Gtk.Window
         {
             SentimentImageHappy.Show();
         }
-        else if (compound < 0.05)
+        else if (compound < -0.05)
         {
             SentimentImageMad.Show();
         }
