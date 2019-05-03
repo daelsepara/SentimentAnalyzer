@@ -47,6 +47,7 @@ public partial class MainWindow
 		this.HeightRequest = 480;
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
+		this.Icon = global::Gdk.Pixbuf.LoadFromResource("SentimentAnalyzer.heartbeat.png");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(3));
 		this.Resizable = false;
 		this.AllowGrow = false;

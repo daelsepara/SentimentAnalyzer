@@ -11,6 +11,7 @@
     <property name="WidthRequest">640</property>
     <property name="HeightRequest">480</property>
     <property name="Title" translatable="yes">MainWindow</property>
+    <property name="Icon">resource:SentimentAnalyzer.heartbeat.png</property>
     <property name="WindowPosition">CenterAlways</property>
     <property name="Resizable">False</property>
     <property name="AllowGrow">False</property>
